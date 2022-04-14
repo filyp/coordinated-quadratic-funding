@@ -9,4 +9,4 @@ The main code is in [CQF.ipynb](https://github.com/filyp/coordinated-quadratic-f
 
 ---------------------------
 
-![cqf](cqf.mp4)
+![cqf](cqf.gif)
