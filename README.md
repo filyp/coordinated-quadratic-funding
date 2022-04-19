@@ -14,6 +14,7 @@ Some properties that it would be nice to have in such a system are:
 - everyone is incentivised to contribute something - just like in quadratic funding, small contributions get a high leverage, and this leverage can get arbitrarily high - so even if you're only willing to pay if you get >100x leverage, there is some contribution size that gives you such a high leverage
 
 A very simple system that has these properties is given by those equations: 
+<br>
 
 ![formula](https://render.githubusercontent.com/render/math?math=h=\sum_{i}^{}\sqrt{payment_i})
 
@@ -32,6 +33,7 @@ On the next animation, you see what happens when someone new joins the smart con
 ![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.gif)
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)
+<br>
 
 ![leverage_formula](<https://render.githubusercontent.com/render/math?math=leverage_i=\frac{d\ \sum_{j}^{}payment_j}{d\ payment_i}>)
 
