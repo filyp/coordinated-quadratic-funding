@@ -13,20 +13,27 @@ Some properties that it would be nice to have in such a system are:
 - known payment limit - you won't have to pay more than some limit you chose
 - everyone is incentivised to contribute something - just like in quadratic funding, small contributions get a high leverage, and this leverage can get arbitrarily high - so even if you're only willing to pay if you get >100x leverage, there is some contribution size that gives you such a high leverage
 
-A very simple system that has these properties is given by those equations: <br>![formula](https://render.githubusercontent.com/render/math?math=h=\sum_{i}^{}\sqrt{payment_i})<br>![formula](https://render.githubusercontent.com/render/math?math=payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i))
+A very simple system that has these properties is given by those equations: 
+
+![formula](https://render.githubusercontent.com/render/math?math=h=\sum_{i}^{}\sqrt{payment_i})
+
+![formula](https://render.githubusercontent.com/render/math?math=payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i))
+
 Payment<sub>i</sub> is the amount that i'th person has to pay, limit<sub>i</sub> is the i'th person's payment limit, and saturation_speed<sub>i</sub> tells how quickly this limit will be approached as new people make payments.
 
 It turns out, this system has a pretty graphical representation:
 ![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.gif)
-<video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video>
+<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Each quarter-cirlce represents one person's contribution. Area of this quarter-circle is the payment limit - the maximum amount they can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents `h` - the sum of square roots of payments. The distance of a quarter-circle's center to the axes meeting points is `1/saturation_speed` - for small `saturation_speed`, the quarter-circle is put further to the left and you can see that they saturate more slowly.
 
 The animation shows the procedure for finding the solution to those two equations. We start with some arbitrary `h`, then compute the payments (yellow sectors), then compute `h`, recomute payments, recompute `h`, and so on, until we converge on the stable solution. 
 
 On the next animation, you see what happens when someone new joins the smart contract. Their contribution increases `h`, which makes others pay more. (Here the procedure of finding the solutions is ommited, and just the final solutions are shown). 
 ![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.gif)
-<video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video>
-Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)<br> ![leverage_formula](<https://render.githubusercontent.com/render/math?math=leverage_i=\frac{d\ \sum_{j}^{}payment_j}{d\ payment_i}>)
+<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
+Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)
+
+![leverage_formula](<https://render.githubusercontent.com/render/math?math=leverage_i=\frac{d\ \sum_{j}^{}payment_j}{d\ payment_i}>)
 
 Because of this feature, the amount that you're willing to pay is roughly proportional to how much you care for the common resource (see [this](https://vitalik.ca/general/2019/12/07/quadratic.html) explanation of QF for the precise argument). 
 
