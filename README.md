@@ -13,7 +13,6 @@ The main code is in [CQF.ipynb](https://github.com/filyp/coordinated-quadratic-f
 
 <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay=true></video> -->
 
+![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.gif)
 
-<video src="solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay=true></video>
-
-<video src="leverage.mp4" controls="controls" style="max-width: 730px;" autoplay=true></video>
+![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.gif)
