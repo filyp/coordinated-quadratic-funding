@@ -9,4 +9,6 @@ The main code is in [CQF.ipynb](https://github.com/filyp/coordinated-quadratic-f
 
 ---------------------------
 
-![cqf](cqf.gif)
+![cqf](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/cqf.gif)
+
+![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/leverage.gif)
