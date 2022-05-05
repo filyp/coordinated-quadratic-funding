@@ -6,7 +6,7 @@
 In the most dangerous collective action problems, we don't have such third party helping us from above. For example in conflict between global superpowers, or even worse, between TAI systems (as described [here](https://www.lesswrong.com/posts/KMocAf9jnAKc2jXri/sections-1-and-2-introduction-strategy-and-governance)), we won't have anyone more powerful trying to resolve the conflict, like a galactic mom. An example of such situation is global superpowers trying to coordinate to fight climate change, or to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax)).
 
 ## Solution
-One thing we can try in this situation, is to create a smart contract where each party says "I'll pay more if others pay more". This way, if you decide to contribute 1$ more, it causes the pot to grow by more than 1$, because your dollar caused other people to contribute some more. This leverage, in some situations can be enough to make someone pay, because the value they get out of the bigger pot is higher than what they have to pay.
+One thing we can try in this situation, is to create a [smart contract](https://en.wikipedia.org/wiki/Smart_contract) where each party says "I'll pay more if others pay more". This way, if you decide to contribute 1$ more, it causes the pot to grow by more than 1$, because your dollar caused other people to contribute some more. This leverage, in some situations can be enough to make someone pay, because the value they get out of the bigger pot is higher than what they have to pay.
 
 Some properties that it would be nice to have in such a system are:
 - continuity - every increase in your payment causes an increase in others' payments
@@ -24,16 +24,16 @@ A very simple system that has these properties is given by those equations:
 
 It turns out, this system has a pretty graphical representation:
 
-![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.gif)
-<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
+![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.gif)
+<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Each quarter-cirlce represents one person's contribution. Area of a quarter-circle is the payment limit - the maximum amount this person can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents `h` - the sum of square roots of payments. The distance of a quarter-circle's center to the axes meeting points is `1/saturation_speed` - for small `saturation_speed`, the quarter-circle is put further to the left and you can see that they saturate more slowly.
 
 The animation shows the procedure for finding the solution to those two equations. We start with some arbitrary `h`, then compute the payments (yellow sectors), then compute `h`, recomute payments, recompute `h`, and so on, until we converge on the stable solution. 
 
 On the next animation, you see what happens when someone new joins the smart contract. Their contribution increases `h`, which makes others pay more. (Here the procedure of finding the solutions is ommited, and just the final solutions are shown). 
 
-![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.gif)
-<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/videos/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
+![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.gif)
+<!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)
 <br>
 
