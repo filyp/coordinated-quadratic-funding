@@ -7,7 +7,10 @@ In the most dangerous collective action problems, we don't have such third party
 
 Some examples:
 - global superpowers trying to coordinate to fight climate change
-- AI organisations coordinating to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax)), for example by funding safety research
+- AI organisations coordinating to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax))
+    - for example by funding safety research
+    - or creating some large dataset together, that's useful for alignment
+    - funding methods which are thought to be safer, like STEM AI or tool AI
 - in general, escaping [inadequate equilibria](https://www.lesswrong.com/s/oLGCcbnvabyibnG9d/p/x5ASTMPKPowLKpLpZ) (see [this post](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/) for many great examples)
 - conflict between transformative AI systems or their owners
 
@@ -76,5 +79,12 @@ Another potential problem is strategic thinking. People can think: "even if I do
 
 A solution would be to modify the algorithm to make the leverages predictable, so that everyone would **know for sure** they will get the leverage they signed up for. This would prevent strategic thinking, and also make people more willing to trust this system.
 
+### Coordinate where there is no pool of funds
+This approach can be used directly where we have a shared resource which can be improved by throwing money at it. But what about situations which aren't directly about money, like coordinating not to do some harmful thing?
 
+Here, we would need to quantify what it means to do this harmful thing, and this quantification needs to be continuous. For example when countries coordinate to prevent climate change, we could count how much CO2 each is emitting - this number quantifies harm, in a continuous way. And if those measures could be reliably verified by some oracle, we could construct a system analogous to the one above: "I will emit less, if you emit less".
+
+An example for AI safety, could be performance on some alignment benchmark. AI organizations deploying their models, could say: "I will squeeze a few more points on this benchmark, if you squeeze some more".
+
+Of course it's hard to keep such promises exactly - you probably will undershoot or overshoot the promised number. For this reason, there also need to be some rewards and penalties for missing the target.
 
