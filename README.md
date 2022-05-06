@@ -3,7 +3,15 @@
 ## Motivation
 [Quadratic funding](https://vitalik.ca/general/2019/12/07/quadratic.html) is a powerful mechanism for resolving some [collective action problems](https://en.wikipedia.org/wiki/Collective_action_problem). But it has a major limitation - it relies on some third party, that provides a matching pool of funds. 
 
-In the most dangerous collective action problems, we don't have such third party helping us from above. For example in conflict between global superpowers, or even worse, between TAI systems (as described [here](https://www.lesswrong.com/posts/KMocAf9jnAKc2jXri/sections-1-and-2-introduction-strategy-and-governance)), we won't have anyone more powerful trying to resolve the conflict, like a galactic mom. An example of such situation is global superpowers trying to coordinate to fight climate change, or to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax)).
+In the most dangerous collective action problems, we don't have such third party helping us from above. Those situations already involve the most powerful actors, so we can't expect someone more powerful to resolve the conflict, like a galactic mom. 
+
+Some examples:
+- global superpowers trying to coordinate to fight climate change
+- AI organisations coordinating to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax)), for example by funding safety research
+- in general, escaping [inadequate equilibria](https://www.lesswrong.com/s/oLGCcbnvabyibnG9d/p/x5ASTMPKPowLKpLpZ) (see [this post](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/) for many great examples)
+- conflict between transformative AI systems or their owners
+
+(The last example may be the most important, but also the hardest to imagine as those systems don't exist yet. [This post](https://www.lesswrong.com/posts/KMocAf9jnAKc2jXri/sections-1-and-2-introduction-strategy-and-governance) (section "1. Introduction") does a good job of describing this scenario. To quote it: "The size of losses from bargaining inefficiencies may massively increase with the capabilities of the actors involved.")
 
 ## Solution
 One thing we can try in this situation, is to create a [smart contract](https://en.wikipedia.org/wiki/Smart_contract) where each party says "I'll pay more if others pay more". This way, if you decide to contribute 1$ more, it causes the pot to grow by more than 1$, because your dollar caused other people to contribute some more. This leverage, in some situations can be enough to make someone pay, because the value they get out of the bigger pot is higher than what they have to pay.
@@ -42,6 +50,13 @@ Here you can see the nice feature of quadratic funding: for small contributions,
 Because of this feature, the amount that you're willing to pay is roughly proportional to how much you care for the common resource (see [this](https://vitalik.ca/general/2019/12/07/quadratic.html) explanation of QF for the precise argument). 
 
 You can find the code for this algorithm [here](https://github.com/filyp/coordinated-quadratic-funding/blob/main/CQF.ipynb).
+
+### Example
+Here you can see an example of such a contract from start to finish:
+![example_situation](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/example_situation.gif)
+
+There are 5 people joining the contract one by one. You can see that the early contributions saturate quickly - what those people finally pay is close to their payment limit. But there are always some less saturated contributions (the late ones), which provide some leverage to the newcomers, so the contract is alive.
+
 
 ## Future work
 ### Quadratic funding problems
