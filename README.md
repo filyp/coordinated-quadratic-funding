@@ -10,7 +10,7 @@ Some examples:
 - AI organisations coordinating to pay [AI alignment tax](https://youtu.be/-vsYtevJ2bc?t=547) (more info [here](https://forum.effectivealtruism.org/tag/alignment-tax))
     - for example by funding safety research
     - or creating some large dataset together, that's useful for alignment
-    - funding methods which are thought to be safer, like STEM AI or tool AI
+    - or funding methods which are thought to be safer, like STEM AI or tool AI
 - in general, escaping [inadequate equilibria](https://www.lesswrong.com/s/oLGCcbnvabyibnG9d/p/x5ASTMPKPowLKpLpZ) (see [this post](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/) for many great examples)
 - conflict between transformative AI systems or their owners
 
