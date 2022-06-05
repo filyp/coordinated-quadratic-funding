@@ -28,6 +28,7 @@ A very simple system that has these properties is given by those equations:
 <br>
 
 $$h=\sum_{i}^{}\sqrt{payment_i(h)}$$
+
 $$payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i)$$
 
 **Payment<sub>i</sub>** is the amount that i'th person has to pay, **limit<sub>i</sub>** is the i'th person's payment limit, and **saturation_speed<sub>i</sub>** tells how quickly this limit will be approached as new people make payments.
@@ -43,7 +44,7 @@ The animation shows the procedure for finding the solution to those two equation
 
 On the next animation, you see what happens when someone new joins the smart contract. Their contribution increases `h`, which makes others pay more. (Here the procedure of finding the solutions is ommited, and just the final solutions are shown). 
 
-<!-- ![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.gif) -->
+![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.gif)
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)
 <br>
@@ -56,7 +57,7 @@ You can find the code for this algorithm [here](https://github.com/filyp/coordin
 
 ### Example
 Here you can see an example of such a contract from start to finish:
-<!-- ![example_situation](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/example_situation.gif) -->
+![example_situation](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/example_situation.gif)
 
 There are 5 people joining the contract one by one. You can see that the early contributions saturate quickly - what those people finally pay is close to their payment limit. But there are always some less saturated contributions (the late ones), which provide some leverage to the newcomers, so the contract is alive.
 
