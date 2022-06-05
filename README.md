@@ -36,7 +36,7 @@ $$payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i)$$
 
 It turns out, this system has a pretty graphical representation:
 
-<!-- ![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.gif) -->
+![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.gif)
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.mp4" controls="controls" autoplay loop></video> -->
 
 Each quarter-cirlce represents one person's contribution. Area of a quarter-circle is the payment limit - the maximum amount this person can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents $h$ - the sum of square roots of payments. The distance of a quarter-circle's center to the right corner is $\frac{1}{saturation\_speed}$ - for small $saturation\_speed$, the quarter-circle is put further to the left and you can see that they saturate more slowly.
@@ -45,7 +45,7 @@ The animation shows the procedure for finding the solution to those two equation
 
 On the next animation, you see what happens when someone new joins the smart contract. Their contribution increases $h$, which makes others pay more. (Here the procedure of finding the solutions is ommited, and just the final solutions are shown). 
 
-<!-- ![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.gif) -->
+![leverage](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.gif)
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/leverage.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Here you can see the nice feature of quadratic funding: for small contributions, the leverage can get arbitrarily large. (To be precise, we compute the leverage **on the margin**, so how the pot changes if you pay 0.01$ more.)
 <br>
@@ -58,7 +58,7 @@ You can find the code for this algorithm [here](https://github.com/filyp/coordin
 
 ### Example
 Here you can see an example of such a contract from start to finish:
-<!-- ![example_situation](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/example_situation.gif) -->
+![example_situation](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/example_situation.gif)
 
 There are 5 people joining the contract one by one. You can see that the early contributions saturate quickly - what those people finally pay is close to their payment limit. But there are always some less saturated contributions (the late ones), which provide some leverage to the newcomers, so the contract is alive.
 
