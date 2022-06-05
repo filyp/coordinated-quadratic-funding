@@ -23,6 +23,7 @@ Some properties that it would be nice to have in such a system are:
 A very simple system that has these properties is given by those equations: 
 
 $$h=\sum_{i}^{}\sqrt{payment_i(h)}$$
+
 $$payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i)$$
 
 - $payment_i(h)$ is the amount that i'th agent has to pay
