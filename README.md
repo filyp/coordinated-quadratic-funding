@@ -27,9 +27,9 @@ Some properties that it would be nice to have in such a system are:
 A very simple system that has these properties is given by those equations: 
 <br>
 
-![formula](https://render.githubusercontent.com/render/math?math=h=\sum_{i}^{}\sqrt{payment_i})
+![formula](https://render.githubusercontent.com/render/math?math=h=\sum_{i}^{}\sqrt{payment_i(h)})
 
-![formula](https://render.githubusercontent.com/render/math?math=payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\_speed_i))
+![formula](https://render.githubusercontent.com/render/math?math=payment_i(h)=\frac{limit_i}{\frac{\pi}{2}}arctan(h*saturation\\_speed_i))
 
 **Payment<sub>i</sub>** is the amount that i'th person has to pay, **limit<sub>i</sub>** is the i'th person's payment limit, and **saturation_speed<sub>i</sub>** tells how quickly this limit will be approached as new people make payments.
 
@@ -39,7 +39,7 @@ It turns out, this system has a pretty graphical representation:
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.mp4" controls="controls" style="max-width: 730px;" autoplay loop></video> -->
 Each quarter-cirlce represents one person's contribution. Area of a quarter-circle is the payment limit - the maximum amount this person can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents `h` - the sum of square roots of payments. The distance of a quarter-circle's center to the axes meeting points is `1/saturation_speed` - for small `saturation_speed`, the quarter-circle is put further to the left and you can see that they saturate more slowly.
 
-The animation shows the procedure for finding the solution to those two equations. We start with some arbitrary `h`, then compute the payments (yellow sectors), then compute `h`, recomute payments, recompute `h`, and so on, until we converge on the stable solution. 
+The animation shows the procedure for finding the solution to those two equations. We start with some arbitrary `h`, then compute the payments (yellow sectors), then compute `h`, recompute payments, recompute `h`, and so on, until we converge on the stable solution. 
 
 On the next animation, you see what happens when someone new joins the smart contract. Their contribution increases `h`, which makes others pay more. (Here the procedure of finding the solutions is ommited, and just the final solutions are shown). 
 
