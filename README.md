@@ -39,7 +39,7 @@ It turns out, this system has a pretty graphical representation:
 ![solution_finding](https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.gif)
 <!-- <video src="https://raw.githubusercontent.com/filyp/coordinated-quadratic-funding/main/animations/solution_finding.mp4" controls="controls" autoplay loop></video> -->
 
-Each quarter-cirlce represents one person's contribution. Area of a quarter-circle is the payment limit - the maximum amount this person can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents $h$ - the sum of square roots of payments. The distance of a quarter-circle's center to the right corner is $\frac{1}{saturation\_speed}$ - for small $saturation\_speed$, the quarter-circle is put further to the left and you can see that they saturate more slowly.
+Each quarter-circle represents one person's contribution. Area of a quarter-circle is the payment limit - the maximum amount this person can pay. The yellow areas are what they currently pay in this particular situation. The squares on the right have the same areas as the respective sectors. So the height of the tower of squares represents $h$ - the sum of square roots of payments. The distance of a quarter-circle's center to the right corner is $\frac{1}{saturation\_speed}$ - for small $saturation\_speed$, the quarter-circle is put further to the left and you can see that they saturate more slowly.
 
 The animation shows the procedure for finding the solution to those two equations. We start with some arbitrary $h$, then compute the payments (yellow sectors), then compute $h$, recompute payments, recompute $h$, and so on, until we converge on the stable solution. 
 
@@ -72,7 +72,7 @@ Each contribution is specified by two parameters: $limit$, and $saturation\_spee
 
 For example if we set it constant for all the contributors (which corresponds to all the quarter-circles having the same center), there may come a point where all of them become almost fully saturated and the leverage for new contributors vanishes.
 
-Alternatively, if each new contribution gets a smaller $saturation\_speed$ than the previous ones (quarter-circles get placed more to the left), there will always be some unsaturated quarter-cirles, so there always be a nice leverage for new contributors. But now, everyone is incentivised to wait for others to pay first, because being on the left means you pay less. This could create a deadlock where everyone is waiting for everyone.
+Alternatively, if each new contribution gets a smaller $saturation\_speed$ than the previous ones (quarter-circles get placed more to the left), there will always be some unsaturated quarter-circles, so there always be a nice leverage for new contributors. But now, everyone is incentivised to wait for others to pay first, because being on the left means you pay less. This could create a deadlock where everyone is waiting for everyone.
 
 If we made a simulation of how agents behave in this system, we could test several methods of setting $saturation\_speed$, and see which one results in the highest pot at the end.
 
