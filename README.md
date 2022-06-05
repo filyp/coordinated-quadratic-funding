@@ -1,7 +1,7 @@
 # Quadratic funding without a matching pool
 
 ## Motivation
-[Quadratic funding](https://vitalik.ca/general/2019/12/07/quadratic.html)[^1] is a powerful mechanism for resolving some [collective action problems](https://en.wikipedia.org/wiki/Collective_action_problem). But it has a major limitation - it relies on some third party, that provides a matching pool of funds. 
+[Quadratic funding](https://vitalik.ca/general/2019/12/07/quadratic.html) is a powerful[^1]. mechanism for resolving some [collective action problems](https://en.wikipedia.org/wiki/Collective_action_problem). But it has a major limitation - it relies on some third party, that provides a matching pool of funds. 
 
 In the most dangerous collective action problems, we don't have such third party helping us from above. Those situations already involve the most powerful actors, so we can't expect someone more powerful to resolve the conflict, like a galactic mom. 
 
