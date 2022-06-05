@@ -12,9 +12,7 @@ Some examples:
     - or creating some large dataset together, that's useful for alignment
     - or funding methods which are thought to be safer, like STEM AI or tool AI
 - in general, escaping [inadequate equilibria](https://www.lesswrong.com/s/oLGCcbnvabyibnG9d/p/x5ASTMPKPowLKpLpZ) (see [this post](https://slatestarcodex.com/2014/07/30/meditations-on-moloch/) for many great examples)
-- conflict between transformative AI systems or their owners
-
-(The last example may be the most important, but also the hardest to imagine as those systems don't exist yet. [This post](https://www.lesswrong.com/posts/KMocAf9jnAKc2jXri/sections-1-and-2-introduction-strategy-and-governance) (section "1. Introduction") does a good job of describing this scenario. To quote it: "The size of losses from bargaining inefficiencies may massively increase with the capabilities of the actors involved.")
+- and most importantly, conflict between transformative AI systems or their owners[^2]
 
 ## Solution
 One thing we can try in this situation, is to create a [smart contract](https://en.wikipedia.org/wiki/Smart_contract) where each party says "I'll pay more if others pay more". This way, if you decide to contribute 1$ more, it causes the pot to grow by more than 1$, because your dollar caused other people to contribute some more. This leverage, in some situations can be enough to make someone pay, because the value they get out of the bigger pot is higher than what they have to pay.
@@ -92,4 +90,6 @@ An example for AI safety, could be performance on some alignment benchmark. AI o
 
 Of course it's hard to keep such promises exactly - you probably will undershoot or overshoot the promised number. For this reason, there also need to be some rewards and penalties for missing the target.
 
-[^1]: [this post](https://vitalik.ca/general/2019/12/07/quadratic.html) explains the motivation behind quadratic funding very clearly, but you don't need to read it to understand the technique described here.
+[^1]: [This post](https://vitalik.ca/general/2019/12/07/quadratic.html) explains the motivation behind quadratic funding very clearly, but you don't need to read it to understand the technique described here.
+
+[^2]: This example may be the most important, but also the hardest to imagine as those systems don't exist yet. [This post](https://www.lesswrong.com/posts/KMocAf9jnAKc2jXri/sections-1-and-2-introduction-strategy-and-governance) (section "1. Introduction") does a good job of describing this scenario. To quote it: "The size of losses from bargaining inefficiencies may massively increase with the capabilities of the actors involved."
